@@ -2,8 +2,10 @@ package chap_06;
 // Overloading : 이름이 같은 메서드를 여러개 만드는 것?
 public class _05_Overloading {
     public static int getPower(int number) {
-        int result = number * number;
-        return result; //return number * number;
+//        int result = number * number;
+//        return result; //return number * number;
+        //위에 변수 하나만 받아서 제곱하는 메소드도 아래로 바꿀 수 있음
+        return getPower(number, 2);
     }
     public static int getPower(String strNumber) {
         int number = Integer.parseInt(strNumber);//문자열 자료형을 입력받아 인수형으로 변환
