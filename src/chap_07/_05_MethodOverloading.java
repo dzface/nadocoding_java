@@ -7,5 +7,9 @@ public class _05_MethodOverloading {
 
         b1.record(true,true,10);
         b1.record();
+
+        //String
+        String s= "BlackBox";
+        System.out.println(s.indexOf("a" ));
     }
 }

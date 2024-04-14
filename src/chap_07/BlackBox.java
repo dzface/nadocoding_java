@@ -50,5 +50,15 @@ public class BlackBox {
         record(true,true,5);
     }
 
+    static void callServiceCenter(){
+        System.out.println("서비스 센터 (1588-0000)로 연결 합니다.");
+        //modelName = "test"; static 객체가 아니라서 접근 불가
+        canAutoReport = false;
+    }
 
+
+    void appendModelName(String modelName) {
+        this.modelName += modelName;
+
+    }
 }
