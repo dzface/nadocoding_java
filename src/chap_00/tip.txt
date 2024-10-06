@@ -1,0 +1,9 @@
+
+단축키, 기타팁, 플러그인 정리
+
+1. Shift 키 두번 퀵서치
+2. memory indicator: 메모리 사용량 표시
+3. ctrl + alt + t : 코드 감싸고 메서드 추천
+
+플러그인
+1. Settings(ctrl+alt+S) 에서 Plugins 탭
