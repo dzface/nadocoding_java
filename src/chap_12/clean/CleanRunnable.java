@@ -13,7 +13,6 @@ public class CleanRunnable implements Runnable{
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
         }
         System.out.println("청소 완료");
     }
