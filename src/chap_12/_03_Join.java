@@ -1,33 +1,29 @@
 package chap_12;
 
-import chap_12.clean.CleanRunnable;
+import chap_12.clean.CustomThread;
 
 public class _03_Join {
     public static void main(String[] args) {
-        CleanRunnable cleanRunnable = new CleanRunnable();
-        Thread thread = new Thread(cleanRunnable);
+        CustomThread c1 = new CustomThread();
+        Thread thread = new Thread(c1);
         thread.start();
         try {
-            // 2.5초 동안 기다린 뒤에도 thread 가 동작중이면 아래코드 동작
-            thread.join(2500);
+            thread.join(3000); // 3초 후에도 종료되지 않으면 다끝내지 않고 그냥 pass
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         cleanByBoss();
     }
-    public static void cleanByBoss(){
-        System.out.println("--혼자서 청소 시작 -- ");
-        for (int i = 1; i <= 10; i+=2) {
-            System.out.println("현재" +i +"번방 청소 중");
+    public static void cleanByBoss() {
+        System.out.println("사장 청소 시작");
+        for (int i = 1; i <=10 ; i+=2) {
+            System.out.println("사장 " +i+ "번 방 청소 중");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-
         }
-        System.out.println("청소 완료");
+        System.out.println("사장 청소 끝 !");
     }
-
-
 }
