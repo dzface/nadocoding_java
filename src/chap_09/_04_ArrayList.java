@@ -1,6 +1,8 @@
 package chap_09;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class _04_ArrayList {
     public static void main(String[] args) {
@@ -32,7 +34,24 @@ public class _04_ArrayList {
             System.out.println(i);
         }
 
+        // 리스트 변경 set(index, 바꿀데이터)
+        // 꿩 >> 캥거루
+        list.set(2, "캥거루");
+        System.out.println(list.get(2));
 
+        // 데이터 포함 여부확인
+        // index 위치를 반환
+        System.out.println(list.indexOf("캥거루"));
+        // 존재여부를 true false로 반환
+        System.out.println(list.contains("캥거루"));
 
+        // 정렬 한글은 가나다순으로 정렬
+        Collections.sort(list);
+        for(String i : list) {
+            System.out.println(i);
+        }
+        // 리스트 전체삭제
+        list.clear();
+        System.out.println(list.size());
     }
 }
