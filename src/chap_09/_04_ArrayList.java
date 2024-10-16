@@ -16,7 +16,7 @@ public class _04_ArrayList {
         // 리스트에는 ArrayList, LinkedList가 있음
         // ArrayList 선언
         ArrayList<String> list = new ArrayList<>();
-        // 데이터 추가
+        // 데이터 추가 add(index, 데이터)로 중간에 넣을 수도 있음 addAll(ArrayList) 는 리스트 전체 추가
         list.add("강아지");
         list.add("고양이");
         list.add("코알라");
