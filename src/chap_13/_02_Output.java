@@ -25,5 +25,15 @@ public class _02_Output {
         //남는공간 0으로 채우기
         System.out.printf("%012.5f\n", Math.PI);
 
+        System.out.println("___________________________________");
+        System.out.printf("%s%n", "Java");
+        // 6자리 확보하고 2글자 출력
+        System.out.printf("%6.2s%n","Java");
+        //응용 여러가지 값 정렬
+        System.out.println("이름      영어   수학   평균"); //
+        System.out.printf("%-6s %3d %5d %6.1f%n","강백호",90,80, 85.0);
+        System.out.printf("%-6s %3d %5d %6.1f%n","서태웅",100,100, 100.0);
+        System.out.printf("%-6s %3d %5d %6.1f%n","채치수",85,85, 85.0);
+
     }
 }
