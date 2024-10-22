@@ -14,5 +14,16 @@ public class _02_Output {
         System.out.printf("%,12d\n", 123456789);
         // 기본적으로 자릿수가 남을경우 오른쪽정렬 되는데 이번엔 왼쪽정렬
         System.out.printf("%-6d\n", 1234);
+
+        //실수 표현하기
+        System.out.println("_____________________________");
+        // %전체자릿수.소숫점뒤에 자릿수f
+        // 원주율 전체 12자리에서 소숫점 5번째 자리까지 출력하기
+        System.out.printf("%12.5f\n", Math.PI);
+        // 남는 공간 왼쪽 정렬로 채우기
+        System.out.printf("%-12.5f\n", Math.PI);
+        //남는공간 0으로 채우기
+        System.out.printf("%012.5f\n", Math.PI);
+
     }
 }
