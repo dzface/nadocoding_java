@@ -1,30 +1,43 @@
 package chap_00;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
         int l = 5;
-        int r = 10000000;
+        int r= 5550;
+
         String sl = String.valueOf(l);
         String sr = String.valueOf(r);
+        String first = "5";
+        for (int i = 1; i < sl.length(); i++) {
+            first +="0";
+        }
         List<String> list = new ArrayList<>();
+        list.add(first);
+        addString(list, first,sr.length()-sl.length());
+        System.out.println(list);
+    }
 
-        String a ="5";
-        String b = "5";
-        for (int i = 0; i < sl.length()-1; i++) {
-            a += "0";
+    public static List<String> addString(List<String> list, String s, int limit) {
+        if(limit ==0){
+            int[] answer = new int[list.size()];
+            for (int i = 0; i < list.size(); i++) {
+                answer[i] = Integer.parseInt(list.get(i));
+            }
+            Collections.sort(list);
+            return list;
         }
+        String a = s+ "0";
+        String b = s+ "5";
         list.add(a);
-        for (int i = sl.length(); i < sr.length(); i++) {
-            a = b+"0";
-            b = b + "5";
-            list.add(a);
-            list.add(b);
-        }
-        for(String i : list) {
-            System.out.println(i);
-        }
+        list.add(b);
+        limit -=1;
+        addString(list,a, limit);
+        addString(list,b, limit);
+
+        return null;
     }
 }
